@@ -3,7 +3,7 @@
 
 Summary:    A library for performing the comparison operations between texts 
 Name:       java-diff-utils
-Version:    1.4.0_`date +%Y%m%d`
+Version:    1.4.0
 Release:    1
 License:    ASL 2.0
 Group:      Development/Java
