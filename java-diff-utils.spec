@@ -11,10 +11,12 @@ URL:		https://github.com/dnaumenko/%{name}
 Source0:	https://github.com/dnaumenko/%{name}/archive/%{commit}/%{name}-%{commit}.zip
 BuildArch:	noarch
 
-BuildRequires:	java-rpmbuild
-BuildRequires:	java-devel
 BuildRequires:	maven-local
+# The following is required for tests only
 BuildRequires:	mvn(junit:junit)
+
+Requires:	java-headless >= 1.5
+Requires:	jpackage-utils
 
 %description
 Diff Utils library is an OpenSource library for performing the comparison
