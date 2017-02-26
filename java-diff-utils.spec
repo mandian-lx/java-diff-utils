@@ -1,3 +1,5 @@
+%{?_javapackages_macros:%_javapackages_macros}
+
 %define commit 683d192aea15b8991d0a6d23567b064cb8496b62
 %define shortcommit %(c=%{commit}; echo ${c:0:7})
 
@@ -12,11 +14,9 @@ Source0:	https://github.com/dnaumenko/%{name}/archive/%{commit}/%{name}-%{commit
 BuildArch:	noarch
 
 BuildRequires:	maven-local
-# The following is required for tests only
 BuildRequires:	mvn(junit:junit)
-
-Requires:	java-headless >= 1.5
-Requires:	jpackage-utils
+BuildRequires:	mvn(org.apache.felix:maven-bundle-plugin)
+BuildRequires:	mvn(org.sonatype.oss:oss-parent:pom:)
 
 %description
 Diff Utils library is an OpenSource library for performing the comparison
